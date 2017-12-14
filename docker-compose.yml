@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  web:
+    container_name: foo
+    build: .
+    volumes:
+      - ./app/:/home/app
+    ports:
+      - "3000:3000"
+    tty: true
