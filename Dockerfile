@@ -1,11 +1,12 @@
 FROM node:latest
 
-WORKDIR /app
+WORKDIR /home/app
 
-COPY ./app/package.json /app/
+#COPY ./app/package.json /app/
 
-RUN npm install
 
-COPY ./app /app/
+#RUN npm install
 
-CMD node server.js
+#COPY ./app /app/
+
+#CMD node server.js

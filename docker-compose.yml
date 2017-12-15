@@ -1,11 +1,16 @@
 version: '3.4'
 
 services:
-  web:
-    container_name: foo
-    build: .
+  web_danielo:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: foo_container
+    image: web_danielo_image
     volumes:
       - ./app/:/home/app
     ports:
-      - "3000:3000"
+      - "3010:3000"
+    stdin_open: true
     tty: true
+    restart: always
